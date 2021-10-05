@@ -21,18 +21,21 @@ public class Task4 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите координату X");
+        System.out.print("> ");
 
         if (scanner.hasNextDouble()) {
 
             coordinateX = scanner.nextDouble();
             System.out.println("Введите координату Y");
+            System.out.print("> ");
             coordinateY = scanner.nextDouble();
             scanner.close();
 
             System.out.println(isThePointInTheShadedArea(coordinateX, coordinateY));
 
         } else {
-            System.out.println("вы ввели неверное число");
+            System.out.println("неверный формат, пожалуйста используйте только цифры");
+            System.out.println();
             coordinateInput();
         }
 
