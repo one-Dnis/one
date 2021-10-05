@@ -1,11 +1,11 @@
 package by.сompany.homework.task01.correctiontask4;
 
+import java.util.Scanner;
+
 /*4. Для данных областей составить линейную программу, которая печатает true,
 если точка с координатами (х, у) принадлежит закрашенной области, и false — в противном случае:*/
 //исправлено
 //дополнено
-
-import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
