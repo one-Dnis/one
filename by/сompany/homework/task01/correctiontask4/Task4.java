@@ -29,7 +29,6 @@ public class Task4 {
             System.out.println("Введите координату Y");
             System.out.print("> ");
             coordinateY = scanner.nextDouble();
-            scanner.close();
 
             System.out.println(isThePointInTheShadedArea(coordinateX, coordinateY));
 
