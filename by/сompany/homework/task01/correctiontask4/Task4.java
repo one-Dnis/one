@@ -3,15 +3,41 @@ package by.сompany.homework.task01.correctiontask4;
 /*4. Для данных областей составить линейную программу, которая печатает true,
 если точка с координатами (х, у) принадлежит закрашенной области, и false — в противном случае:*/
 //исправлено
+//дополнено
+
+import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
 
-        double x = 0;
-        double y = -1;
+        coordinateInput();
 
-        System.out.println(isThePointInTheShadedArea(x, y));
+    }
 
+    public static void coordinateInput() {
+
+        double coordinateX;
+        double coordinateY;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите координату X");
+
+        if (scanner.hasNextDouble()) {
+
+            coordinateX = scanner.nextDouble();
+
+            System.out.println("Введите координату Y");
+            coordinateY = scanner.nextDouble();
+
+            scanner.close();
+
+            System.out.println(isThePointInTheShadedArea(coordinateX, coordinateY));
+
+        } else {
+            System.out.println("вы ввели неверное число");
+            coordinateInput();
+        }
 
     }
 
