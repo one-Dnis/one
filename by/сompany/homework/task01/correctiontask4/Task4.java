@@ -20,23 +20,25 @@ public class Task4 {
         double coordinateY;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите координату X");
-        System.out.print("> ");
+        System.out.println("Введите координату X: ");
 
-        if (scanner.hasNextDouble()) {
+        while (!scanner.hasNextDouble()) {
+            scanner.nextLine();
+            System.out.println("Неверный ввод. Введите координату X: ");
 
-            coordinateX = scanner.nextDouble();
-            System.out.println("Введите координату Y");
-            System.out.print("> ");
-            coordinateY = scanner.nextDouble();
-
-            System.out.println(isThePointInTheShadedArea(coordinateX, coordinateY));
-
-        } else {
-            System.out.println("неверный формат, пожалуйста используйте только цифры");
-            System.out.println();
-            coordinateInput();
         }
+        coordinateX = scanner.nextDouble();
+
+        System.out.println("Введите координату Y: ");
+
+        while (!scanner.hasNextDouble()) {
+            scanner.nextLine();
+            System.out.println("Неверный ввод. Введите координату Y: ");
+
+        }
+        coordinateY = scanner.nextDouble();
+
+        System.out.println(isThePointInTheShadedArea(coordinateX, coordinateY));
 
     }
 
