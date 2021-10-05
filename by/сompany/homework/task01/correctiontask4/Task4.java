@@ -10,34 +10,24 @@ public class Task4 {
         double x = 0;
         double y = -1;
 
-        isThePointInTheShadedArea(x, y);
+        System.out.println(isThePointInTheShadedArea(x, y));
+
 
     }
 
-    public static void isThePointInTheShadedArea(double x, double y) {
+    public static boolean isThePointInTheShadedArea(double x, double y) {
 
         if ((x >= 0 & x <= 2 & y >= 0 & y <= 4)
                 | (x <= 0 & x >= -2 & y >= 0 & y <= 4)
                 | (x <= 0 & x >= -4 & y <= 0 & y >= -3)
                 | (x >= 0 & x <= 4 & y <= 0 & y >= -3)) {
 
-            printResult(true);
+            return true;
 
         } else {
 
-            printResult(false);
+            return false;
 
         }
     }
-
-    public static void printResult(boolean result) {
-
-        if (result) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
-
-    }
-
 }
