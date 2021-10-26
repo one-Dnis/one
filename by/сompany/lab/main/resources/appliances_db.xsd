@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.epam.tr.com.appliances"
+            xmlns:tns="http://www.epam.tr.com.appliances">
+
+    <element name="appliances">
+        <complexType>
+            <sequence>
+                <element name="ovens">
+                    <complexType>
+                        <sequence>
+                            <element name="oven" type="tns:Oven" minOccurs="1" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="laptops">
+                    <complexType>
+                        <sequence>
+                            <element name="laptop" type="tns:Laptop" minOccurs="1" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="refrigerators">
+                    <complexType>
+                        <sequence>
+                            <element name="refrigerator" type="tns:Refrigerator" minOccurs="1" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="vacuum-cleaners">
+                    <complexType>
+                        <sequence>
+                            <element name="vacuum-cleaner" type="tns:Vacuum-cleaner" minOccurs="1" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="tablet-pcs">
+                    <complexType>
+                        <sequence>
+                            <element name="tablet-pc" type="tns:Tablet-pc" minOccurs="1" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="loudspeakers">
+                    <complexType>
+                        <sequence>
+                            <element name="speakers" type="tns:Speakers" minOccurs="1" maxOccurs="unbounded"/>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+
+    <complexType name="Oven">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="power-consumption" type="double"/>
+            <element name="weight" type="double"/>
+            <element name="capacity" type="double"/>
+            <element name="depth" type="double"/>
+            <element name="height" type="double"/>
+            <element name="width" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Laptop">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="battery-capacity" type="double"/>
+            <element name="os" type="string"/>
+            <element name="memory-rom" type="double"/>
+            <element name="system-memory" type="double"/>
+            <element name="cpu" type="double"/>
+            <element name="display-inchs" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Refrigerator">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="power-consumption" type="double"/>
+            <element name="weight" type="double"/>
+            <element name="freezer-capacity" type="double"/>
+            <element name="overall-capacity" type="double"/>
+            <element name="height" type="double"/>
+            <element name="width" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Vacuum-cleaner">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="power-consumption" type="double"/>
+            <element name="filter-type" type="string"/>
+            <element name="bag-type" type="string"/>
+            <element name="wand-type" type="string"/>
+            <element name="motor-speed-regulation" type="double"/>
+            <element name="cleaning-width" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Tablet-pc">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="battery-capacity" type="double"/>
+            <element name="display-inchs" type="double"/>
+            <element name="memory-rom" type="double"/>
+            <element name="flash-memory-capacity" type="double"/>
+            <element name="color" type="string"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Speakers">
+        <sequence>
+            <element name="type" type="string"/>
+            <element name="power-consumption" type="double"/>
+            <element name="number-of-speakers" type="int"/>
+            <element name="frequency-range" type="string"/>
+            <element name="cord-length" type="double"/>
+        </sequence>
+    </complexType>
+
+
+</schema>
