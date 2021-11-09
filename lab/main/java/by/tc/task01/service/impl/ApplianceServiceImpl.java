@@ -22,193 +22,212 @@ public class ApplianceServiceImpl implements ApplianceService {
     public void find(Criteria criteria) {
         List<Appliance> appliances = applianceDAO.find();
 
-        for (Appliance app : appliances) { //наверное лучше это запилить в switch, или вообще отдельным методом
+        for (Appliance app : appliances) {
 
-            if (criteria.getType().equalsIgnoreCase(app.getType())) { //тут определяем тип прибора
-                if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) { //тип параметра
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getPowerConsumption()))) { //значение параметра
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("weight")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getWeight()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("capacity")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getCapacity()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("depth")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getDepth()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("height")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getHeight()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("width")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getWidth()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-
-                    //laptops
-
-                } else if (criteria.getParameter().equalsIgnoreCase("batteryCapacity")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getBatteryCapacity()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("os")) {
-                    if (criteria.getValue().equalsIgnoreCase(((Laptop) app).getOS())) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("memoryRom")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getMemoryRom()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("systemMemory")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getSystemMemory()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("cpu")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getCPU()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("displayInchs")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getDisplayInchs()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-
-                    //refrigerators
-
-                } else if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getPowerConsumption()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("weight")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getWeight()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("freezerCapacity")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getFreezerCapacity()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("overallCapacity")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getOverallCapacity()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("height")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getHeight()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("width")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getWidth()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-
-                    //vacuum cleaners
-
-                } else if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((VacuumCleaner) app).getPowerConsumption()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("filterType")) {
-                    if (criteria.getValue().equalsIgnoreCase(((VacuumCleaner) app).getFilterType())) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("bagType")) {
-                    if (criteria.getValue().equalsIgnoreCase(((VacuumCleaner) app).getBagType())) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("wandType")) {
-                    if (criteria.getValue().equalsIgnoreCase(((VacuumCleaner) app).getWandType())) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("motorSpeedRegulation")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((VacuumCleaner) app).getMotorSpeedRegulation()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("cleaningWidth")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((VacuumCleaner) app).getCleaningWidth()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-
-                    //tablet PC
-
-                } else if (criteria.getParameter().equalsIgnoreCase("batteryCapacity")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getBatteryCapacity()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("displayInchs")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getDisplayInchs()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("memoryRom")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getMemoryRom()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("flashMemoryCapacity")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getFlashMemoryCapacity()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("color")) {
-                    if (criteria.getValue().equalsIgnoreCase(((TabletPC) app).getColor())) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-
-                    //speakers
-
-                } else if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Speakers) app).getPowerConsumption()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("numberOfSpeakers")) {
-                    if (criteria.getValue().equalsIgnoreCase(Integer.toString(((Speakers) app).getNumberOfSpeakers()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("frequencyRange")) {
-                    if (criteria.getValue().equalsIgnoreCase(((Speakers) app).getFrequencyRange())) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                } else if (criteria.getParameter().equalsIgnoreCase("cordLength")) {
-                    if (criteria.getValue().equalsIgnoreCase(Double.toString(((Speakers) app).getCordLength()))) {
-                        System.out.println("есть такой прибор");
-                        System.out.println(app);
-                    }
-                }
+            if (criteria.getType().equalsIgnoreCase(app.getType()) & criteria.getType().equalsIgnoreCase("oven")) {
+                findOven(app, criteria);
+            } else if (criteria.getType().equalsIgnoreCase(app.getType()) & criteria.getType().equalsIgnoreCase("laptop")) {
+                findLaptop(app, criteria);
+            } else if (criteria.getType().equalsIgnoreCase(app.getType()) & criteria.getType().equalsIgnoreCase("refrigerator")) {
+                findRefrigerator(app, criteria);
+            } else if (criteria.getType().equalsIgnoreCase(app.getType()) & criteria.getType().equalsIgnoreCase("vacuumCleaner")) {
+                findVacuumCleaner(app, criteria);
+            } else if (criteria.getType().equalsIgnoreCase(app.getType()) & criteria.getType().equalsIgnoreCase("tabletPC")) {
+                findTabletPC(app, criteria);
+            } else if (criteria.getType().equalsIgnoreCase(app.getType()) & criteria.getType().equalsIgnoreCase("speakers")) {
+                findSpeakers(app, criteria);
             }
         }
+    }
 
+
+    private void findOven(Appliance app, Criteria criteria) {
+        if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) { //тип параметра
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getPowerConsumption()))) { //значение параметра
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("weight")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getWeight()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("capacity")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getCapacity()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("depth")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getDepth()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("height")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getHeight()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("width")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Oven) app).getWidth()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        }
+    }
+
+    private void findLaptop(Appliance app, Criteria criteria) {
+        if (criteria.getParameter().equalsIgnoreCase("batteryCapacity")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getBatteryCapacity()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("os")) {
+            if (criteria.getValue().equalsIgnoreCase(((Laptop) app).getOS())) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("memoryRom")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getMemoryRom()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("systemMemory")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getSystemMemory()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("cpu")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getCPU()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("displayInchs")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Laptop) app).getDisplayInchs()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        }
+    }
+
+    private void findRefrigerator(Appliance app, Criteria criteria) {
+        if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getPowerConsumption()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("weight")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getWeight()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("freezerCapacity")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getFreezerCapacity()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("overallCapacity")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getOverallCapacity()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("height")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getHeight()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("width")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Refrigerator) app).getWidth()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        }
+    }
+
+    private void findVacuumCleaner(Appliance app, Criteria criteria) {
+        if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((VacuumCleaner) app).getPowerConsumption()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("filterType")) {
+            if (criteria.getValue().equalsIgnoreCase(((VacuumCleaner) app).getFilterType())) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("bagType")) {
+            if (criteria.getValue().equalsIgnoreCase(((VacuumCleaner) app).getBagType())) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("wandType")) {
+            if (criteria.getValue().equalsIgnoreCase(((VacuumCleaner) app).getWandType())) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("motorSpeedRegulation")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((VacuumCleaner) app).getMotorSpeedRegulation()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("cleaningWidth")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((VacuumCleaner) app).getCleaningWidth()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        }
+    }
+
+    private void findTabletPC(Appliance app, Criteria criteria) {
+        if (criteria.getParameter().equalsIgnoreCase("batteryCapacity")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getBatteryCapacity()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("displayInchs")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getDisplayInchs()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("memoryRom")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getMemoryRom()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("flashMemoryCapacity")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((TabletPC) app).getFlashMemoryCapacity()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("color")) {
+            if (criteria.getValue().equalsIgnoreCase(((TabletPC) app).getColor())) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        }
+    }
+
+    private void findSpeakers(Appliance app, Criteria criteria) {
+        if (criteria.getParameter().equalsIgnoreCase("powerConsumption")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Speakers) app).getPowerConsumption()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("numberOfSpeakers")) {
+            if (criteria.getValue().equalsIgnoreCase(Integer.toString(((Speakers) app).getNumberOfSpeakers()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("frequencyRange")) {
+            if (criteria.getValue().equalsIgnoreCase(((Speakers) app).getFrequencyRange())) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        } else if (criteria.getParameter().equalsIgnoreCase("cordLength")) {
+            if (criteria.getValue().equalsIgnoreCase(Double.toString(((Speakers) app).getCordLength()))) {
+                System.out.println("есть такой прибор");
+                System.out.println(app);
+            }
+        }
     }
 
 
@@ -317,3 +336,5 @@ public class ApplianceServiceImpl implements ApplianceService {
 
     }
 }
+
+//чукча писатель
