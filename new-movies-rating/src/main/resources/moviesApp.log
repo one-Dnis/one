@@ -1,0 +1,110 @@
+[DEBUG] 2022-02-10 04:32:43,929 Main - ТЕСТ 1 ЛОГГЕРА
+[DEBUG] 2022-02-10 04:32:43,930 Main - ТЕСТ 2 ЛОГГЕРА
+[DEBUG] 2022-02-11 01:50:54,186 Main - autoRank is started
+[DEBUG] 2022-02-11 01:52:59,283 Main - autoRank is started
+[DEBUG] 2022-02-11 01:53:22,217 Main - autoRank is started
+[DEBUG] 2022-02-11 01:53:50,719 Main - autoRank is started
+[DEBUG] 2022-02-11 01:55:15,197 Main - autoRank is started
+[DEBUG] 2022-02-11 01:56:08,321 Main - autoRank is started
+[DEBUG] 2022-02-11 01:56:53,374 Main - autoRank is started
+[DEBUG] 2022-02-11 01:57:08,083 Main - autoRank is started
+[DEBUG] 2022-02-11 01:59:46,963 Main - autoRank is started
+[DEBUG] 2022-02-11 02:00:12,388 Main - autoRank is started
+[DEBUG] 2022-02-11 02:00:57,247 Main - autoRank is started
+[DEBUG] 2022-02-11 02:01:34,071 Main - autoRank is started
+[DEBUG] 2022-02-11 02:02:17,433 Main - autoRank is started
+[DEBUG] 2022-02-11 02:04:13,610 Main - autoRank is started
+[DEBUG] 2022-02-11 02:04:42,861 Main - autoRank is started
+[DEBUG] 2022-02-11 02:05:14,645 Main - autoRank is started
+[DEBUG] 2022-02-11 02:07:32,439 Main - autoRank is started
+[DEBUG] 2022-02-11 02:14:14,402 Main - autoRank is started
+[DEBUG] 2022-02-11 02:15:09,467 Main - autoRank is started
+[DEBUG] 2022-02-11 02:15:38,825 Main - autoRank is started
+[DEBUG] 2022-02-11 02:16:00,724 Main - autoRank is started
+[DEBUG] 2022-02-11 02:24:47,903 Main - autoRank is started
+[DEBUG] 2022-02-11 02:26:14,850 Main - autoRank is started
+[DEBUG] 2022-02-11 02:26:35,646 Main - autoRank is started
+[DEBUG] 2022-02-11 02:27:05,119 Main - autoRank is started
+[DEBUG] 2022-02-11 02:27:16,988 Main - autoRank is started
+[DEBUG] 2022-02-11 02:27:25,686 Main - autoRank is started
+[DEBUG] 2022-02-11 02:27:35,378 Main - autoRank is started
+[DEBUG] 2022-02-11 02:30:12,622 Main - autoRank is started
+[DEBUG] 2022-02-11 02:30:44,698 Main - autoRank is started
+[DEBUG] 2022-02-11 02:31:32,443 Main - autoRank is started
+[DEBUG] 2022-02-11 02:32:02,996 Main - autoRank is started
+[DEBUG] 2022-02-11 02:32:11,639 Main - autoRank is started
+[DEBUG] 2022-02-11 02:32:20,549 Main - autoRank is started
+[DEBUG] 2022-02-11 02:32:41,642 Main - autoRank is started
+[DEBUG] 2022-02-11 02:33:26,377 Main - autoRank is started
+[ERROR] 2022-02-11 03:00:03,950 com.company.example.movies.dao.impl.UserDAOImpl - ошибка при попытке проверить существует ли отзыв в БД
+java.sql.SQLException: No value specified for parameter 2
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1037)
+	at com.company.example.movies.dao.impl.UserDAOImpl.userMovieMark(UserDAOImpl.java:665)
+	at com.company.example.movies.Main.main(Main.java:44)
+[DEBUG] 2022-02-11 03:09:55,601 Main - autoRank is started
+[DEBUG] 2022-02-11 03:10:23,082 Main - autoRank is started
+[DEBUG] 2022-02-11 03:13:19,486 Main - autoRank is started
+[DEBUG] 2022-02-11 03:14:12,674 Main - autoRank is started
+[DEBUG] 2022-02-11 03:15:31,626 Main - autoRank is started
+[DEBUG] 2022-02-11 03:17:28,081 Main - autoRank is started
+[DEBUG] 2022-02-11 03:18:49,270 Main - autoRank is started
+[DEBUG] 2022-02-11 03:19:26,824 Main - autoRank is started
+[DEBUG] 2022-02-11 04:11:51,246 Main - autoRank is started
+[DEBUG] 2022-02-11 04:14:45,195 Main - autoRank is started
+[DEBUG] 2022-02-11 04:18:40,747 Main - autoRank is started
+[DEBUG] 2022-02-11 04:18:56,225 Main - autoRank is started
+[DEBUG] 2022-02-11 04:19:28,043 Main - autoRank is started
+[DEBUG] 2022-02-11 04:26:51,022 Main - autoRank is started
+[DEBUG] 2022-02-11 04:27:54,466 Main - autoRank is started
+[DEBUG] 2022-02-11 04:28:58,863 Main - autoRank is started
+[DEBUG] 2022-02-11 04:29:17,423 Main - autoRank is started
+[ERROR] 2022-02-11 06:33:36,416 com.company.example.movies.dao.impl.MovieReviewDAOImpl - ошибка при попытке проверить существует ли отзыв в БД
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE movies_rating.users.login = 'user3' AND movies_rating.movies.title = 'Сп' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at com.company.example.movies.dao.impl.MovieReviewDAOImpl.isReviewExists(MovieReviewDAOImpl.java:212)
+	at com.company.example.movies.Main.main(Main.java:97)
+[ERROR] 2022-02-11 06:36:33,550 com.company.example.movies.dao.impl.MovieReviewDAOImpl - ошибка при попытке проверить существует ли отзыв в БД
+java.sql.SQLException: Parameter index out of range (1 > number of parameters, which is 0).
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.checkBounds(ClientPreparedStatement.java:1402)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.getCoreParameterIndex(ClientPreparedStatement.java:1415)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setString(ClientPreparedStatement.java:1782)
+	at com.company.example.movies.dao.impl.MovieReviewDAOImpl.isReviewExists(MovieReviewDAOImpl.java:210)
+	at com.company.example.movies.Main.main(Main.java:97)
+[ERROR] 2022-02-11 06:37:04,427 com.company.example.movies.dao.impl.MovieReviewDAOImpl - ошибка при попытке проверить существует ли отзыв в БД
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE movies_rating.users.login = 'user3' AND movies_rating.movies.title = 'Сп' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at com.company.example.movies.dao.impl.MovieReviewDAOImpl.isReviewExists(MovieReviewDAOImpl.java:212)
+	at com.company.example.movies.Main.main(Main.java:97)
+[ERROR] 2022-02-11 06:38:09,357 com.company.example.movies.dao.impl.MovieReviewDAOImpl - ошибка при попытке проверить существует ли отзыв в БД
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE movies_rating.users.login = 'user3' AND movies_rating.movies.title = 'Сп' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at com.company.example.movies.dao.impl.MovieReviewDAOImpl.isReviewExists(MovieReviewDAOImpl.java:213)
+	at com.company.example.movies.Main.main(Main.java:97)
+[ERROR] 2022-02-11 06:38:46,475 com.company.example.movies.dao.impl.MovieReviewDAOImpl - ошибка при попытке проверить существует ли отзыв в БД
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'movies_rating.users.login = 'user3' AND movies_rating.movies.title = 'Списо' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1020)
+	at com.company.example.movies.dao.impl.MovieReviewDAOImpl.isReviewExists(MovieReviewDAOImpl.java:212)
+	at com.company.example.movies.Main.main(Main.java:97)
